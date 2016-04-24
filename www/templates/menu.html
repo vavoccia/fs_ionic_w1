@@ -1,0 +1,9 @@
+<ion-view view-title="Menu">
+  <ion-content scrollbar-y="false">
+    <ion-list>
+      <ion-item ng-repeat="dish in dishes" href="#/app/menu/{{dish.id}}">
+        {{dish.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
