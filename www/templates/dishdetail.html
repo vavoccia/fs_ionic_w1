@@ -1,5 +1,13 @@
 <ion-view view-title="Dish Details">
-  <ion-content scrollbar-y="false">
-    <h1>Dish Details</h1>
+  <ion-content>
+      <div class="card">
+          <div class="item item-body item-text-wrap">
+               <img class="full-image" ng-src="{{baseURL+dish.image}}" alt="Uthappizza">
+                <h2>{{dish.name}}
+                 <span style="font-size:75%">{{dish.price | currency}}</span>
+                <span class="badge badge-assertive">{{dish.label}}</span></h2>
+                <p>{{dish.description}}</p>
+          </div>
+      </div>
   </ion-content>
 </ion-view>
