@@ -1,4 +1,10 @@
 <ion-view view-title="Dish Details">
+    <ion-nav-buttons side="secondary">
+      <div class="buttons">
+        <button class="button button-icon icon ion-android-more-horizontal"
+          ng-click="openPopOver($event)"></button>
+      </div>
+    </ion-nav-buttons>
   <ion-content>
       <div class="card">
           <div class="item item-body item-text-wrap">
@@ -7,6 +13,23 @@
                  <span style="font-size:75%">{{dish.price | currency}}</span>
                 <span class="badge badge-assertive">{{dish.label}}</span></h2>
                 <p>{{dish.description}}</p>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col col-offset-10 col-45">
+          <Strong>Customer Comments:</strong> 
+        </div>
+        <div class="col">
+          <p>Sort by:</p>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col col-offset-10 col-90">
+          <blockquote class="item-text-wrap" ng-repeat="comment in dish.comments">
+            <p>{{comment.rating}} Stars</p>
+            <p>{{comment.comment}}</p>
+            <p>{{comment.author}}, {{comment.date | date}}</p>
+          </blockquote>
           </div>
       </div>
   </ion-content>
