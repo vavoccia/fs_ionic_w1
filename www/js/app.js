@@ -93,7 +93,7 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers', 'conFusion.servic
           controller: 'MenuController',
           resolve: {
             dishes: ['menuFactory', function(menuFactory){
-                console.log("Back to Home");
+                console.log("Back to Home!");
                 return menuFactory.query();
             }]
           }

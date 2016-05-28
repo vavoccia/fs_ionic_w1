@@ -61,6 +61,7 @@ angular.module('conFusion.services',['ngResource'])
   return {
     store: function(key, value) {
       $window.localStorage[key] = value;
+      console.log("storing");
     },
     get: function(key, defaultValue) {
       return $window.localStorage[key] || defaultValue;
