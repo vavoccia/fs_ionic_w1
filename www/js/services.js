@@ -1,5 +1,5 @@
 'use strict';
-
+//Week 3 Assigment 3 code
 angular.module('conFusion.services',['ngResource'])
         .constant("baseURL","http://localhost:3000/")
         .factory('menuFactory', ['$resource', 'baseURL', function($resource,baseURL) {

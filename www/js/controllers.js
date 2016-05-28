@@ -1,5 +1,5 @@
 angular.module('conFusion.controllers', [])
-
+//Week3 Assignment 3 Code
     .controller('AppCtrl', function($scope, $ionicModal, $timeout, $localStorage) {
 
     // With the new view caching in Ionic, Controllers are only called
